@@ -50,7 +50,7 @@ export default class Cadastro extends React.Component {
                     <TouchableOpacity
                         style={styles.saveButton}
                     >
-                        <Text style={styles.saveButtonText}>Save</Text>
+                        <Text style={styles.saveButtonText}>Cadastrar</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>
