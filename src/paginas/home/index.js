@@ -2,7 +2,8 @@ import React,{useState,useEffect} from 'react'
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View ,FlatList,Image,TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import firebase from '../../firebase/firebaseConnection'
+import firebase from '../../firebase/firebaseConnection';
+import CardAlunos from '../../components/cardAluno';
 
 export default function Home() {
     // const navigation = useNavigation();
@@ -51,7 +52,7 @@ export default function Home() {
         data = {alunos}
         numColumns = {2}
         keyExtractor = {(item) => item.key}
-        renderItem = {(({item}) => <Text> {item.nome} </Text>)}
+        renderItem = { ( ({item}) => <CardAlunos data = {item}></CardAlunos>)}
       />
     </View>
   );
